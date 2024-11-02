@@ -89,7 +89,7 @@ numeric_df = factory_df.select_dtypes(include=[np.number])
 st.sidebar.title("Capstone Project Navigation")
 section = st.sidebar.radio("Select a Section:", 
                            ("Dataset Overview Dashboard", "Trend Analysis (Actual vs. Setpoint)", 
-                            "EDA", "Clustering", "Predictions", "Feature Importance Analysis",
+                             "Clustering", "Predictions", "Feature Importance Analysis",
                             "Error Threshold Analysis", "Error Distribution Analysis", "Anomaly Detection",
 		            "Cumulative Error Tracking", "Correlation Analysis"))
 
@@ -239,17 +239,6 @@ if section == "Dataset Overview Dashboard":
 
 
 
-    # Tab 5: Data Quality Indicators
-    with tabs[4]:
-        st.header("Data Quality Indicators")
-        # Show missing values percentage
-        missing_values = factory_df.isnull().sum() / len(factory_df) * 100
-        st.bar_chart(missing_values[missing_values > 0])  # Show only features with missing data
-        st.write("Outliers and anomalies can be highlighted here based on thresholds.")
-        # Further analysis for outliers can be added here
-
-
-
 # 2. Trend Analysis (Actual vs. Setpoint) Section
 elif section == "Trend Analysis (Actual vs. Setpoint)":
     st.title("Trend Analysis: Actual vs. Setpoint")
@@ -311,18 +300,6 @@ elif section == "Trend Analysis (Actual vs. Setpoint)":
         fig.update_layout(title=f'{selected_measurement_actual.split(".")[-2]} - Actual vs. Setpoint Over Time',
                           xaxis_title="Time", yaxis_title="Measurement Value", height=600, width=1000)
         st.plotly_chart(fig)
-
-
-# 3. EDA Section
-elif section == "EDA":
-    st.title("Exploratory Data Analysis (EDA)")
-    st.write("This section provides additional insights into the dataset.")
-    
-    # Select and display a histogram for any measurement
-    measurement = st.selectbox("Choose a measurement to analyze:", stage1_actuals)
-    fig = px.histogram(factory_df, x=measurement, nbins=30, title=f"Distribution of {measurement}")
-    st.plotly_chart(fig)
-
 
 
 
