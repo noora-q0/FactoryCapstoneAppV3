@@ -76,6 +76,7 @@ Analyze correlations between different variables to understand relationships and
 
 ## Installation
 
-1. Clone the repository:
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/your-repository-name.git
+   git clone https://github.com/noora-q0/FactoryCapstoneAppV3.git
+
