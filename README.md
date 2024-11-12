@@ -26,11 +26,26 @@ This application is designed to help users understand and analyze the continuous
 
 ### 1. Dataset Overview Dashboard
 
-Provides an overview of the dataset with various visualizations. Tabs include:
+## Overview Tab
 
-- **[Tab Name 1]**: Describe this tab's purpose and what it displays.
-- **[Tab Name 2]**: Describe this tab's purpose and what it displays.
-- **[Tab Name 3]**: Describe this tab's purpose and what it displays.
+The Overview Tab provides foundational insights into the dataset, offering a variety of visualizations to help understand data structure, variability, and feature relationships. Each sub-tab includes specific analyses:
+
+### 1. Data Distribution
+- **Purpose**: Displays the spread of values for each feature, helping to identify typical ranges, trends, and any significant outliers.
+- **Displays**: Histograms and density plots for each main feature, highlighting common values and any unusual data points.
+
+### 2. Box Plots
+- **Purpose**: Highlights the variability and identifies outliers for each feature, crucial for assessing stability in each process variable.
+- **Displays**: Box plots with median, quartile ranges, and outliers, offering insights into each feature’s consistency and range.
+
+### 3. Correlation Heatmap
+- **Purpose**: Visualizes relationships between features, enabling identification of highly correlated pairs, which may indicate dependencies or interactions.
+- **Displays**: A heatmap showing correlation coefficients for feature pairs, with color gradients reflecting the strength and direction of relationships.
+
+### 4. Time Series Trends
+- **Purpose**: Tracks changes in features over time, useful for detecting patterns, seasonal effects, or shifts that might impact output measurements.
+- **Displays**: Line charts for time-based data, providing a view of feature trends across different time intervals.
+
 
 *(Add additional tabs and descriptions as necessary.)*
 
